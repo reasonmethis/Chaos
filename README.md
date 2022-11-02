@@ -1,1 +1,3 @@
 An interactive Javascript simulation of a double pendulum with an accompanying short article to illustrate the concept of chaos in physics. Clicking on it will create two additional pendula that are almost synchronized with the original one. The degrees of synchronization will be shown as the pendula become desynchronized due to the "butterfly effect".
+
+Original article: https://www.reasonmethis.com/2021/03/chaos-simulation-wacky-double-pendulum.html
