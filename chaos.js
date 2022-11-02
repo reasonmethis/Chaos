@@ -1,46 +1,46 @@
 // Physics constants
-const simStepsPerFrame = 1000;
-const frameDelayMillis = 20;
-var speedupFactor = 0.5;
+const gconstant = 9.8;
 const frictionHalfLifeSeconds = 0.5;
 const inverseFrictionHalfLifeSeconds = 0;
 const ballMass = 10;
-const springRestLength = 0.5; // won't use
 const springConst = 10.0;
 const springConstMax = 1000.0;
 const nBalls = 2;
-var springRestLs = [0.5, 0.27];
+const springRestLs = [0.5, 0.27];
 const yAnchor = 0.5;
-var springInitAngles = [-3.1416 * 0.4, 3.1416 * 0.01];
-var masses = [5, 0.6];
-var springConsts = [500.0, 500.0];
+const springInitAngles = [-3.1416 * 0.4, 3.1416 * 0.01];
+const masses = [5, 0.6];
+const springConsts = [500.0, 500.0];
+const TINY = 1.0e-19;
 //var masses = [5, 0.1];
 //var springConsts = [500.0, 90.0];
-const gconstant = 9.8;
 
 //ball types
 const ANCHOR = 1;
 const BUTTERFLY = 2;
 
-const TINY = 1.0e-19;
 // Rendering constants
+const simStepsPerFrame = 1000;
+const frameDelayMillis = 20;
+const speedupFactor = 0.5;
 const pixelsPerMeter = 200.0; // rendering zoom factor
 const radiusPerMass = 0.05;
+const ballRadiusMeters = 0.04;
+const grabDistanceLimit = 0.0;
+
 let iOrigin; // hor location of world origin on canvas [pixels]
 let jOrigin; // ver location of world origin on canvas [pixels]
 let xmin;
 let xmax;
 let ymin, ymax, xrng, yrng;
-const ballRadiusMeters = 0.04;
-const grabDistanceLimit = 0.0;
 
-var sim, sims;
-var kinE = 0.0;
-var potE = 0.0;
-var dispDiff = 0;
-var dif1, dif2;
+let sim, sims;
+let kinE = 0.0;
+let potE = 0.0;
+let dispDiff = 0;
+let dif1, dif2;
 
-var context, canvas;
+let context, canvas;
 
 function* enumerate(it, start = 0) {
   let i = start;
