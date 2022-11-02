@@ -449,7 +449,7 @@ function makeString(sim, x, y, shadow) {
     var col1 = "#000";
     var col2 = "#e08";
   }
-  let anchor1 = sim.AddBall(
+  let anchor1 = sim.addBall(
     new Ball(ballMass, ANCHOR, x, y, col1, ballRadiusMeters)
   );
   //let anchor1 = sim.AddBall(new Ball(BallMass, ANCHOR, x, y, col1, BallRadiusMeters * PixelsPerMeter));
